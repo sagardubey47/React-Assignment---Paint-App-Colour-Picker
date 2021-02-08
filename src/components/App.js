@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../styles/App.css';
 import Selection from './Selection';
-import ColourSelector from './ColourSelector';
+import ColourSelector from './ColourSelector'; 
 
 const colourConfig = [{
     key: 'blue',
@@ -28,10 +28,11 @@ const App = () => {
   const applyColor = (updateSelectionStyle) => {
     updateSelectionStyle(nextBackground)
   }
-
+  console.log(applyColor);
   return (
+    
     <div id="master">
-      <h5 className="heading">{/* display title here */}</h5>
+      <h5 className="heading">{title}</h5>
 
       <div className="row">
         {colourConfig.map((config, index) => (
@@ -46,7 +47,7 @@ const App = () => {
           ))
         }
       </div>
-    </div >
+    </div>
   )
 }
 
