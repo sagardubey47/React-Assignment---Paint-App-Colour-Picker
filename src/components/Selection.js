@@ -2,12 +2,11 @@
 import React, {useState} from 'react'
 import '../styles/Child.css'
 
-function Selection({applyColor}) {
+function Selection({applyColor, Selection}) {
 
-    const [selectionStyle, updateSelectionStyle] = useState({background:""})
     return (
         
-            <div className="fix-box" onClick={() => applyColor(updateSelectionStyle)} style={selectionStyle}>
+            <div className="fix-box" onClick={applyColor} style={Selection}>
                 <h2 className="subheading">selection</h2>
             </div>
         
